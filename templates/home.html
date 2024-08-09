@@ -12,30 +12,76 @@
     <title>House Price Prediction</title>
   </head>
   <body>
-    <div class="container">
-      <form
-        action="{{url_for('predict')}}"
-        method="post"
-        class="d-flex flex-column m-2"
-      >
-        <input type="text" name="MedInc" placeholder="MedInc" required />
-        <input type="text" name="HouseAge" placeholder="HouseAge" required />
-        <input type="text" name="AveRooms" placeholder="AveRooms" required />
-        <input type="text" name="AveBedrms" placeholder="AveBedrms" required />
-        <input
-          type="text"
-          name="Population"
-          placeholder="Population"
-          required
-        />
-        <input type="text" name="AveOccup" placeholder="AveOccup" required />
-        <input type="text" name="Latitude" placeholder="Latitude" required />
-        <input type="text" name="Longitude" placeholder="Longitude" required />
-        <input type="submit" value="Predict" />
-      </form>
+    <div
+      class="container vh-100 d-flex flex-column align-items-center justify-content-center"
+    >
+      <div>
+        <form
+          action="{{url_for('predict')}}"
+          method="post"
+          class="d-flex flex-column"
+        >
+          <input
+            type="text"
+            name="MedInc"
+            placeholder="MedInc"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="HouseAge"
+            placeholder="HouseAge"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="AveRooms"
+            placeholder="AveRooms"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="AveBedrms"
+            placeholder="AveBedrms"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="Population"
+            placeholder="Population"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="AveOccup"
+            placeholder="AveOccup"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="Latitude"
+            placeholder="Latitude"
+            required
+            class="mt-2"
+          />
+          <input
+            type="text"
+            name="Longitude"
+            placeholder="Longitude"
+            required
+            class="mt-2"
+          />
+          <input type="submit" value="Predict" class="mt-2" />
+        </form>
+      </div>
+      <div>{{ prediction_text }}</div>
     </div>
-
-    {{ prediction_text }}
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

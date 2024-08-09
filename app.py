@@ -15,13 +15,6 @@ def home():
 
 @app.route('/predict_api', methods = ['POST'])
 def predict_api():
-    # data = request.json['data']
-    # print(data)
-    # print(np.array(list(data.values())).reshape(1, -1))
-    # new_data = scaler.transform(np.array(list(data.values())).reshape(1, -1))
-    # op = regmodel.predict(new_data)
-    # print(op[0])
-    # return jsonify(op)
     try:
         data = request.json['data']
         print(f"Received data: {data}")
